@@ -93,19 +93,26 @@ public static class db_connexion
         {
             connection.Open();
 
-            string insertClients1 = @"INSERT INTO Clients (nom, adresse, siret) VALUES ('EDF', '3 rue des alobroches', '41006906600042');";
+            //Ajout des clients
+            /*string insertClients1 = @"INSERT INTO Clients (nom, adresse, siret) VALUES ('EDF', '3 rue des alobroches', '41006906600042');";
             string insertClients2 = @"INSERT INTO Clients (nom, adresse, siret) VALUES ('SNCF', '5 rue Saint Paul', '41006906600042');";
-            string insertClients3 = @"INSERT INTO Clients (nom, adresse, siret) VALUES ('Atos', '34 rue de la soie', '48397413500020');";
+            string insertClients3 = @"INSERT INTO Clients (nom, adresse, siret) VALUES ('Atos', '34 rue de la soie', '48397413500020');";*/
+
+            //Ajout des catégories
+            string insertCat1 = @"INSERT INTO Categories (nom) VALUES ('Electroniques');";
+            string insertCat2 = @"INSERT INTO Categories (nom) VALUES ('Alimentaire');";
+            string insertCat3 = @"INSERT INTO Categories (nom) VALUES ('Hygiene');";
+
 
             using (SQLiteCommand command = new SQLiteCommand(connection))
             {
-                command.CommandText = insertClients1;
+                command.CommandText = insertCat1;
                 command.ExecuteNonQuery();
 
-                command.CommandText = insertClients2;
+                command.CommandText = insertCat2;
                 command.ExecuteNonQuery();
 
-                command.CommandText = insertClients3;
+                command.CommandText = insertCat3;
                 command.ExecuteNonQuery();
             }
         }
