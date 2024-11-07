@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\phili\\OneDrive\\Bureau\\projets Ynov\\App_Grosiste\\App_Grosiste\\App_Grosiste\\App_Grosiste.csproj": {}
+    "C:\\Users\\phili\\OneDrive\\Bureau\\projets Ynov\\App_Grosiste\\App_Grosiste\\App_Grosiste.csproj": {}
   },
   "projects": {
-    "C:\\Users\\phili\\OneDrive\\Bureau\\projets Ynov\\App_Grosiste\\App_Grosiste\\App_Grosiste\\App_Grosiste.csproj": {
+    "C:\\Users\\phili\\OneDrive\\Bureau\\projets Ynov\\App_Grosiste\\App_Grosiste\\App_Grosiste.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\phili\\OneDrive\\Bureau\\projets Ynov\\App_Grosiste\\App_Grosiste\\App_Grosiste\\App_Grosiste.csproj",
+        "projectUniqueName": "C:\\Users\\phili\\OneDrive\\Bureau\\projets Ynov\\App_Grosiste\\App_Grosiste\\App_Grosiste.csproj",
         "projectName": "App_Grosiste",
-        "projectPath": "C:\\Users\\phili\\OneDrive\\Bureau\\projets Ynov\\App_Grosiste\\App_Grosiste\\App_Grosiste\\App_Grosiste.csproj",
+        "projectPath": "C:\\Users\\phili\\OneDrive\\Bureau\\projets Ynov\\App_Grosiste\\App_Grosiste\\App_Grosiste.csproj",
         "packagesPath": "C:\\Users\\phili\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\phili\\OneDrive\\Bureau\\projets Ynov\\App_Grosiste\\App_Grosiste\\App_Grosiste\\obj\\",
+        "outputPath": "C:\\Users\\phili\\OneDrive\\Bureau\\projets Ynov\\App_Grosiste\\App_Grosiste\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

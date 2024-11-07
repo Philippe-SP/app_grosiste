@@ -19,7 +19,8 @@ namespace App_Grosiste
         public MainWindow()
         {
             InitializeComponent();
-            db_connexion.initializeConnexion();
+            //db_connexion.initializeConnexion();
+            db_connexion.AddDataToDb();
         }
     }
 }

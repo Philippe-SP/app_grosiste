@@ -86,6 +86,30 @@ public static class db_connexion
 
         }
     }
+
+    public static void AddDataToDb()
+    {
+        using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+        {
+            connection.Open();
+
+            string insertClients1 = @"INSERT INTO Clients (nom, adresse, siret) VALUES ('EDF', '3 rue des alobroches', '41006906600042');";
+            string insertClients2 = @"INSERT INTO Clients (nom, adresse, siret) VALUES ('SNCF', '5 rue Saint Paul', '41006906600042');";
+            string insertClients3 = @"INSERT INTO Clients (nom, adresse, siret) VALUES ('Atos', '34 rue de la soie', '48397413500020');";
+
+            using (SQLiteCommand command = new SQLiteCommand(connection))
+            {
+                command.CommandText = insertClients1;
+                command.ExecuteNonQuery();
+
+                command.CommandText = insertClients2;
+                command.ExecuteNonQuery();
+
+                command.CommandText = insertClients3;
+                command.ExecuteNonQuery();
+            }
+        }
+    }
 }
 
 
