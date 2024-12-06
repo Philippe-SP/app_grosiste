@@ -1,4 +1,6 @@
 ﻿using App_Grosiste.Scripts;
+using System.IO;
+using System.Net;
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
@@ -7,7 +9,11 @@ namespace App_Grosiste.Page_Admin
 {
     public partial class AdminPage : Page
     {
+        //Récupération du context de la base de données
         private readonly db_context _context;
+
+        //Chemin absolu d'accès au fichier logs.txt
+        private string logFilePath = @"C:\Users\phili\OneDrive\Bureau\projets Ynov\App_Grosiste\App_Grosiste\logs.txt";
 
         public AdminPage()
         {
@@ -30,14 +36,30 @@ namespace App_Grosiste.Page_Admin
             // Vérifie si un client a été trouvé
             if (clientToDelete != null)
             {
-                // Supprimer le client
+                // Supprime le client
                 _context.Clients.Remove(clientToDelete);
 
-                // Sauvegarder les changements dans la base de données
+                // Sauvegarde les changements dans la base de données
                 _context.SaveChanges();
 
                 // Afficher un message de succès
                 MessageBox.Show("Client supprimé avec succès.");
+
+                //Ajout d'un log
+                try
+                {
+                    //Initialisation de l'ecriture du log dans un using pour permettre l'ouverture et la fermture auto du fichier
+                    using (StreamWriter logsWriter = new StreamWriter(logFilePath, append: true))
+                    {
+                        logsWriter.WriteLine($"[{DateTime.Now}] INFO: Supression du client: {clientToSupName}.");
+                        logsWriter.Flush();//Ecris directement dans le fichier avant fermeture de celui-ci
+                    } 
+                } 
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Echec de l'ecriture du log: " + ex.ToString());
+                }
+
             }
             else
             {
@@ -83,7 +105,25 @@ namespace App_Grosiste.Page_Admin
                 }
 
                 AddClient();
+                _context.SaveChanges();
+
                 MessageBox.Show("Client ajouté avec succès.");
+                MessageBox.Show(logFilePath);
+
+                //Ajout d'un log
+                try
+                {
+                    using (StreamWriter logsWriter = new StreamWriter(logFilePath, append: true))
+                    {
+                        logsWriter.WriteLine($"[{DateTime.Now}] INFO: Ajout du client: {newClient.nom}.");
+                        logsWriter.Flush();
+                    }
+                } 
+                catch (Exception ex) 
+                {
+                    MessageBox.Show("Echec de l'ecriture du log: " + ex.ToString()); 
+                }
+                
             }
         }
         /* ********************* Fin de gestion des clients ************************* */
@@ -110,6 +150,21 @@ namespace App_Grosiste.Page_Admin
                     produit.quantite = produit.quantite - int.Parse(productQteToSell);//Modif
                     _context.SaveChanges();//Sauvegarde de la modification en base de données
                     MessageBox.Show("Produit(s) vendu(s) avec succès.");
+
+                    //Ajout d'un log
+                    try
+                    {
+                        using (StreamWriter logsWriter = new StreamWriter(logFilePath, append: true))
+                        {
+                            logsWriter.WriteLine($"[{DateTime.Now}] INFO: Vente de {productQteToSell} {produit.nom}. - Stock restant: {produit.quantite}.");
+                            logsWriter.Flush();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Echec de l'ecriture du log: " + ex.ToString());
+                    }
+
                 }
                 else
                 {
@@ -170,7 +225,23 @@ namespace App_Grosiste.Page_Admin
                 }
 
                 AddProduct();
+                _context.SaveChanges();
                 MessageBox.Show("Produit(s) ajouté(s) avec succès.");
+
+                //Ajout d'un log
+                try
+                {
+                    using (StreamWriter logsWriter = new StreamWriter(logFilePath, append: true))
+                    {
+                        logsWriter.WriteLine($"[{DateTime.Now}] INFO: Ajout du produit: {newProduct.nom}, quantitée: {newProduct.quantite}.");
+                        logsWriter.Flush();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Echec de l'ecriture du log: " + ex.ToString());
+                }
+
             }
         }
         /* ********************* Fin de gestion des produits ************************ */

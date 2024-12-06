@@ -1,0 +1,3 @@
+[06/12/2024 15:24:28] INFO: Ajout du client: Ikea.
+[06/12/2024 15:24:51] INFO: Ajout du client: Ikea.
+[06/12/2024 15:32:10] INFO: Ajout du client: IKEA.
