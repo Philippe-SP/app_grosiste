@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\phili\OneDrive\Bureau\projets Ynov\App_Grosiste\App_Grosiste\App.xaml
-5861904013
+6205507096
 31430361178
-10-1173587067
+111908298031
 2421042219085
-ClientsPage.xaml;HomePage.xaml;HomeWindow.xaml;LoginWindow.xaml;ProductPage.xaml;
+HomeWindow.xaml;LoginWindow.xaml;Page_Accueil\HomePage.xaml;Page_Admin\AdminPage.xaml;Page_Client\ClientsPage.xaml;Page_Produit\ProductPage.xaml;
 
 False
 

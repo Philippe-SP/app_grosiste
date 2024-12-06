@@ -21,7 +21,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button Click="RedirectHome" Name="AccueilBtn" Content="Accueil" HorizontalAlignment="Left" VerticalAlignment="Top" Width="130" Height="40" Margin="17,426,0,0" BorderBrush="{x:Null}" Foreground="White" FontFamily="Eras ITC" Cursor="Hand" BorderThickness="1,0,1,1" Background="White" FontWeight="ExtraBold">
+        <Button Click="RedirectHome" Name="AccueilBtn" Content="Accueil" HorizontalAlignment="Left" VerticalAlignment="Top" Width="130" Height="40" Margin="17,392,0,0" BorderBrush="{x:Null}" Foreground="White" FontFamily="Eras ITC" Cursor="Hand" BorderThickness="1,0,1,1" Background="White" FontWeight="ExtraBold">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border Name="AccueilBorder" Background="#FF7E3DC4" BorderBrush="{x:Null}" BorderThickness="2" CornerRadius="15">
@@ -30,7 +30,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button Click="RedirectClients" Name="ClientBtn" Content="Clients" HorizontalAlignment="Left" VerticalAlignment="Top" Width="130" Height="40" Margin="17,328,0,0" BorderBrush="{x:Null}" Foreground="White" FontFamily="Eras ITC" Cursor="Hand" BorderThickness="1,0,1,1">
+        <Button Click="RedirectClients" Name="ClientBtn" Content="Clients" HorizontalAlignment="Left" VerticalAlignment="Top" Width="130" Height="40" Margin="17,307,0,0" BorderBrush="{x:Null}" Foreground="White" FontFamily="Eras ITC" Cursor="Hand" BorderThickness="1,0,1,1">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border x:Name="ClientBorder" BorderBrush="{x:Null}" BorderThickness="2" CornerRadius="15" Background="#FF7E3DC4">
@@ -39,10 +39,19 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button Click="RedirectLogin" Name="LoginBtn" Content="Déconnexion" HorizontalAlignment="Left" VerticalAlignment="Top" Width="130" Height="40" Margin="17,521,0,0" BorderBrush="{x:Null}" Foreground="White" FontFamily="Eras ITC" Cursor="Hand" BorderThickness="1,0,1,1">
+        <Button Click="RedirectLogin" Name="LoginBtn" Content="Déconnexion" HorizontalAlignment="Left" VerticalAlignment="Top" Width="130" Height="40" Margin="17,604,0,0" BorderBrush="{x:Null}" Foreground="White" FontFamily="Eras ITC" Cursor="Hand" BorderThickness="1,0,1,1">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border Name="LoginBorder" Background="#FF7E3DC4" BorderBrush="{x:Null}" BorderThickness="2" CornerRadius="15">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Click="RedirectAdmin" x:Name="AdminBtn" Content="Admin" HorizontalAlignment="Left" VerticalAlignment="Top" Width="130" Height="40" Margin="17,476,0,0" BorderBrush="{x:Null}" Foreground="White" FontFamily="Eras ITC" Cursor="Hand" BorderThickness="1,0,1,1">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="ProductBorder" Background="#FF7E3DC4" BorderBrush="{x:Null}" BorderThickness="2" CornerRadius="15">
                         <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                     </Border>
                 </ControlTemplate>

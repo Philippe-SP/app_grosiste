@@ -23,7 +23,7 @@ namespace App_Grosiste.Scripts
 
         public class Produit
         {
-            public required int id { get; set; }
+            public int id { get; set; }
             public required int quantite { get; set; }
             public required int prix { get; set; }
             public required string nom { get; set; }
@@ -33,7 +33,7 @@ namespace App_Grosiste.Scripts
 
         public class Client
         {
-            public required int id { get; set; }
+            public int id { get; set; }
             public required string nom { get; set; }
             public required string adresse { get; set; }
             public required string siret { get; set; }

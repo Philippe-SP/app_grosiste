@@ -26,6 +26,7 @@ namespace App_Grosiste
             ProduitBtn.FontWeight = FontWeights.Regular;
             ClientBtn.FontWeight = FontWeights.Regular;
             LoginBtn.FontWeight = FontWeights.Regular;
+            AdminBtn.FontWeight = FontWeights.Regular;
         }
 
         //redirection LOGIN
@@ -51,6 +52,7 @@ namespace App_Grosiste
             ProduitBtn.FontWeight = FontWeights.Regular;
             AccueilBtn.FontWeight = FontWeights.Regular;
             LoginBtn.FontWeight = FontWeights.Regular;
+            AdminBtn.FontWeight = FontWeights.Regular;
         }
 
         //redirection PRODUITS
@@ -66,6 +68,23 @@ namespace App_Grosiste
             AccueilBtn.FontWeight = FontWeights.Regular;
             ClientBtn.FontWeight = FontWeights.Regular;
             LoginBtn.FontWeight = FontWeights.Regular;
+            AdminBtn.FontWeight = FontWeights.Regular;
+        }
+
+        //redirection ADMIN
+        public void RedirectAdmin(object sender, RoutedEventArgs e)
+        {
+            //Redirect vers la bonne page
+            MainFrame.Content = new Page_Admin.AdminPage();
+
+            //Augmentation de l'epaisseur du text du bouton
+            AdminBtn.FontWeight = FontWeights.ExtraBold;
+
+            //Modification des text des autres boutons
+            AccueilBtn.FontWeight = FontWeights.Regular;
+            ClientBtn.FontWeight = FontWeights.Regular;
+            LoginBtn.FontWeight = FontWeights.Regular;
+            ProduitBtn.FontWeight = FontWeights.Regular;
         }
     }
 }

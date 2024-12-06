@@ -61,7 +61,7 @@ namespace App_Grosiste {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/App_Grosiste;component/clientspage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/App_Grosiste;V1.0.0.0;component/clientspage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\ClientsPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
