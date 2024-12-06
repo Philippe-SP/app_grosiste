@@ -43,12 +43,12 @@
         <Label Content="Ajout d'un client" HorizontalAlignment="Left" Margin="204,283,0,0" VerticalAlignment="Top" FontFamily="Eras ITC" FontWeight="SemiBold" FontSize="16"/>
         <Label Content="Vente d'un produit" HorizontalAlignment="Left" Margin="212,421,0,0" VerticalAlignment="Top" FontFamily="Eras ITC" FontWeight="SemiBold" FontSize="16" Width="160"/>
         <Label Content="Supression d'un client" HorizontalAlignment="Left" Margin="212,535,0,0" VerticalAlignment="Top" FontFamily="Eras ITC" FontWeight="SemiBold" FontSize="16"/>
-        <TextBox HorizontalAlignment="Left" Margin="219,188,0,0" TextWrapping="Wrap" Text="Nom" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="407,148,0,0" TextWrapping="Wrap" Text="Quantitée" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="407,188,0,0" TextWrapping="Wrap" Text="Prix" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="589,148,0,0" TextWrapping="Wrap" Text="Categorie" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="589,188,0,0" TextWrapping="Wrap" Text="Emplacement" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Ajouter" HorizontalAlignment="Left" VerticalAlignment="Top" Width="119" Height="30" Margin="742,164,0,0" BorderBrush="{x:Null}" Foreground="White" FontFamily="Eras ITC" Cursor="Hand">
+        <TextBox Name="ProductAddName" HorizontalAlignment="Left" Margin="219,188,0,0" TextWrapping="Wrap" Text="Nom" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="ProductAddQte" HorizontalAlignment="Left" Margin="407,148,0,0" TextWrapping="Wrap" Text="Quantitée" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="ProductAddPrice" HorizontalAlignment="Left" Margin="407,188,0,0" TextWrapping="Wrap" Text="Prix" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="ProductAddCategorie" HorizontalAlignment="Left" Margin="589,148,0,0" TextWrapping="Wrap" Text="Categorie" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="ProductAddPlace" HorizontalAlignment="Left" Margin="589,188,0,0" TextWrapping="Wrap" Text="Emplacement" VerticalAlignment="Top" Width="120"/>
+        <Button Click="AddProduct_Click" Name="AddProduct" Content="Ajouter" HorizontalAlignment="Left" VerticalAlignment="Top" Width="119" Height="30" Margin="742,164,0,0" BorderBrush="{x:Null}" Foreground="White" FontFamily="Eras ITC" Cursor="Hand">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border Background="#7e3dc4" BorderThickness="2" CornerRadius="15">
