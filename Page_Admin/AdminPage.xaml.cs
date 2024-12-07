@@ -1,9 +1,9 @@
 ﻿using App_Grosiste.Scripts;
 using System.IO;
-using System.Net;
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
+using System.Diagnostics;
 
 namespace App_Grosiste.Page_Admin
 {
@@ -15,10 +15,26 @@ namespace App_Grosiste.Page_Admin
         //Chemin absolu d'accès au fichier logs.txt
         private string logFilePath = @"C:\Users\phili\OneDrive\Bureau\projets Ynov\App_Grosiste\App_Grosiste\logs.txt";
 
+        //Variable globale permettant d'afficher le dernier produit vendu
+        public static class GlobalVariableProductSelled
+        {
+            public static string lastProductSelled = "Aucun produits vendus aujourd'hui";
+        }
+
         public AdminPage()
         {
             InitializeComponent();
             _context = new db_context();
+        }
+
+        //Ouverture du fichier logs pour l'utilisateur
+        public void ShowLogs_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo
+            {
+                FileName = logFilePath,
+                UseShellExecute = true // permet d'ouvrir le fichier avec l'application par defaut
+            });
         }
 
         /* ************************* Gestion des clients **************************** */
@@ -108,7 +124,6 @@ namespace App_Grosiste.Page_Admin
                 _context.SaveChanges();
 
                 MessageBox.Show("Client ajouté avec succès.");
-                MessageBox.Show(logFilePath);
 
                 //Ajout d'un log
                 try
@@ -149,6 +164,9 @@ namespace App_Grosiste.Page_Admin
                 {
                     produit.quantite = produit.quantite - int.Parse(productQteToSell);//Modif
                     _context.SaveChanges();//Sauvegarde de la modification en base de données
+
+                    GlobalVariableProductSelled.lastProductSelled = produit.nom;//Récpération du nom du produit vendu
+
                     MessageBox.Show("Produit(s) vendu(s) avec succès.");
 
                     //Ajout d'un log

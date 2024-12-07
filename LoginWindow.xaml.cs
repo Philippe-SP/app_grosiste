@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.IO;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace App_Grosiste
 {
@@ -20,6 +8,10 @@ namespace App_Grosiste
     /// </summary>
     public partial class LoginWindow : Window
     {
+
+        //Chemin absolu d'accès au fichier logs.txt
+        private string logFilePath = @"C:\Users\phili\OneDrive\Bureau\projets Ynov\App_Grosiste\App_Grosiste\logs.txt";
+
         public LoginWindow()
         {
             InitializeComponent();
@@ -46,6 +38,21 @@ namespace App_Grosiste
             //Redirect en cas d'utilisateur authentifié
             if (isRedirectOk == true)
             {
+                //Ajout d'un log
+                try
+                {
+                    //Initialisation de l'ecriture du log dans un using pour permettre l'ouverture et la fermture auto du fichier
+                    using (StreamWriter logsWriter = new StreamWriter(logFilePath, append: true))
+                    {
+                        logsWriter.WriteLine($"[{DateTime.Now}] INFO: Utilisateur authentifié, accès à l'application.");
+                        logsWriter.Flush();//Ecris directement dans le fichier avant fermeture de celui-ci
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Echec de l'ecriture du log: " + ex.ToString());
+                }
+
                 var homeWindow = new HomeWindow();
 
                 Application.Current.MainWindow = homeWindow;

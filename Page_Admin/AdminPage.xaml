@@ -24,25 +24,25 @@
                 <SolidColorBrush Color="#FFBC90EB" Opacity="0.75"/>
             </Rectangle.Fill>
         </Rectangle>
-        <Rectangle HorizontalAlignment="Left" Height="90" Stroke="Black" VerticalAlignment="Top" Width="700" RadiusX="20" RadiusY="20" Margin="192,273,0,0">
+        <Rectangle HorizontalAlignment="Left" Height="90" Stroke="Black" VerticalAlignment="Top" Width="700" RadiusX="20" RadiusY="20" Margin="192,244,0,0">
             <Rectangle.Fill>
                 <SolidColorBrush Color="#FFBC90EB" Opacity="0.75"/>
             </Rectangle.Fill>
         </Rectangle>
-        <Rectangle HorizontalAlignment="Left" Height="68" Stroke="Black" VerticalAlignment="Top" Width="700" RadiusX="20" RadiusY="20" Margin="192,415,0,0">
+        <Rectangle HorizontalAlignment="Left" Height="68" Stroke="Black" VerticalAlignment="Top" Width="700" RadiusX="20" RadiusY="20" Margin="192,362,0,0">
             <Rectangle.Fill>
                 <SolidColorBrush Color="#FFBC90EB" Opacity="0.75"/>
             </Rectangle.Fill>
         </Rectangle>
-        <Rectangle HorizontalAlignment="Left" Height="64" Stroke="Black" VerticalAlignment="Top" Width="700" RadiusX="20" RadiusY="20" Margin="192,535,0,0">
+        <Rectangle HorizontalAlignment="Left" Height="64" Stroke="Black" VerticalAlignment="Top" Width="700" RadiusX="20" RadiusY="20" Margin="192,457,0,0">
             <Rectangle.Fill>
                 <SolidColorBrush Color="#FFBC90EB" Opacity="0.75"/>
             </Rectangle.Fill>
         </Rectangle>
         <Label Content="Ajout d'un produit" HorizontalAlignment="Left" Margin="204,134,0,0" VerticalAlignment="Top" FontFamily="Eras ITC" FontWeight="SemiBold" FontSize="16"/>
-        <Label Content="Ajout d'un client" HorizontalAlignment="Left" Margin="204,283,0,0" VerticalAlignment="Top" FontFamily="Eras ITC" FontWeight="SemiBold" FontSize="16"/>
-        <Label Content="Vente d'un produit" HorizontalAlignment="Left" Margin="212,421,0,0" VerticalAlignment="Top" FontFamily="Eras ITC" FontWeight="SemiBold" FontSize="16" Width="160"/>
-        <Label Content="Supression d'un client" HorizontalAlignment="Left" Margin="212,535,0,0" VerticalAlignment="Top" FontFamily="Eras ITC" FontWeight="SemiBold" FontSize="16"/>
+        <Label Content="Ajout d'un client" HorizontalAlignment="Left" Margin="204,254,0,0" VerticalAlignment="Top" FontFamily="Eras ITC" FontWeight="SemiBold" FontSize="16"/>
+        <Label Content="Vente d'un produit" HorizontalAlignment="Left" Margin="212,368,0,0" VerticalAlignment="Top" FontFamily="Eras ITC" FontWeight="SemiBold" FontSize="16" Width="160"/>
+        <Label Content="Supression d'un client" HorizontalAlignment="Left" Margin="212,457,0,0" VerticalAlignment="Top" FontFamily="Eras ITC" FontWeight="SemiBold" FontSize="16"/>
         <TextBox Name="ProductAddName" HorizontalAlignment="Left" Margin="219,188,0,0" TextWrapping="Wrap" Text="Nom" VerticalAlignment="Top" Width="120"/>
         <TextBox Name="ProductAddQte" HorizontalAlignment="Left" Margin="407,148,0,0" TextWrapping="Wrap" Text="Quantitée" VerticalAlignment="Top" Width="120"/>
         <TextBox Name="ProductAddPrice" HorizontalAlignment="Left" Margin="407,188,0,0" TextWrapping="Wrap" Text="Prix" VerticalAlignment="Top" Width="120"/>
@@ -57,10 +57,10 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <TextBox Name="ClientAddName" HorizontalAlignment="Left" Margin="219,328,0,0" TextWrapping="Wrap" Text="Nom" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="ClientAddAdress" HorizontalAlignment="Left" Margin="407,328,0,0" TextWrapping="Wrap" Text="Adresse" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="ClientAddSiret" HorizontalAlignment="Left" Margin="589,328,0,0" TextWrapping="Wrap" Text="Siret" VerticalAlignment="Top" Width="120"/>
-        <Button Click="AddClient_Click" Name="AddClient" Content="Ajouter" HorizontalAlignment="Left" VerticalAlignment="Top" Width="119" Height="30" Margin="742,303,0,0" BorderBrush="{x:Null}" Foreground="White" FontFamily="Eras ITC" Cursor="Hand">
+        <TextBox Name="ClientAddName" HorizontalAlignment="Left" Margin="219,300,0,0" TextWrapping="Wrap" Text="Nom" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="ClientAddAdress" HorizontalAlignment="Left" Margin="407,300,0,0" TextWrapping="Wrap" Text="Adresse" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="ClientAddSiret" HorizontalAlignment="Left" Margin="589,300,0,0" TextWrapping="Wrap" Text="Siret" VerticalAlignment="Top" Width="120"/>
+        <Button Click="AddClient_Click" Name="AddClient" Content="Ajouter" HorizontalAlignment="Left" VerticalAlignment="Top" Width="119" Height="30" Margin="742,274,0,0" BorderBrush="{x:Null}" Foreground="White" FontFamily="Eras ITC" Cursor="Hand">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border Background="#7e3dc4" BorderThickness="2" CornerRadius="15">
@@ -70,12 +70,12 @@
             </Button.Template>
         </Button>
         <!-- Vente de produits -->
-        <TextBox Name="ProductSellName" HorizontalAlignment="Left" Margin="407,440,0,0" TextWrapping="Wrap" Text="Nom" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="ProductSellQte" HorizontalAlignment="Left" Margin="589,440,0,0" TextWrapping="Wrap" Text="Quantité" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="ProductSellName" HorizontalAlignment="Left" Margin="407,387,0,0" TextWrapping="Wrap" Text="Nom" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="ProductSellQte" HorizontalAlignment="Left" Margin="589,387,0,0" TextWrapping="Wrap" Text="Quantité" VerticalAlignment="Top" Width="120"/>
         <!-- Supression de clients -->
-        <TextBox Name="ClientSupName" HorizontalAlignment="Left" Margin="407,558,0,0" TextWrapping="Wrap" Text="Nom" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="ClientSupSiret" HorizontalAlignment="Left" Margin="589,558,0,0" TextWrapping="Wrap" Text="Siret" VerticalAlignment="Top" Width="120"/>
-        <Button Click="SellProduct_Click" Name="SellProduct" Content="Vendre" HorizontalAlignment="Left" VerticalAlignment="Top" Width="119" Height="30" Margin="742,434,0,0" BorderBrush="{x:Null}" Foreground="White" FontFamily="Eras ITC" Cursor="Hand">
+        <TextBox Name="ClientSupName" HorizontalAlignment="Left" Margin="407,480,0,0" TextWrapping="Wrap" Text="Nom" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="ClientSupSiret" HorizontalAlignment="Left" Margin="589,480,0,0" TextWrapping="Wrap" Text="Siret" VerticalAlignment="Top" Width="120"/>
+        <Button Click="SellProduct_Click" Name="SellProduct" Content="Vendre" HorizontalAlignment="Left" VerticalAlignment="Top" Width="119" Height="30" Margin="742,381,0,0" BorderBrush="{x:Null}" Foreground="White" FontFamily="Eras ITC" Cursor="Hand">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border Background="#7e3dc4" BorderThickness="2" CornerRadius="15">
@@ -84,7 +84,17 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button Click="SupClient_Click" Name="SupClient" Content="Supprimer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="119" Height="30" Margin="742,552,0,0" BorderBrush="{x:Null}" Foreground="White" FontFamily="Eras ITC" Cursor="Hand">
+        <Button Click="SupClient_Click" Name="SupClient" Content="Supprimer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="119" Height="30" Margin="742,474,0,0" BorderBrush="{x:Null}" Foreground="White" FontFamily="Eras ITC" Cursor="Hand">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="#7e3dc4" BorderThickness="2" CornerRadius="15">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Label Content="Fichier logs:" HorizontalAlignment="Left" Margin="407,572,0,0" VerticalAlignment="Top" Height="43" Width="144" FontFamily="Eras ITC" FontWeight="SemiBold" FontSize="24"/>
+        <Button Click="ShowLogs_Click" x:Name="ShowLogsBtn" Content="Afficher les logs" HorizontalAlignment="Left" VerticalAlignment="Top" Width="144" Height="52" Margin="565,563,0,0" BorderBrush="{x:Null}" Foreground="White" FontFamily="Eras ITC" Cursor="Hand">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border Background="#7e3dc4" BorderThickness="2" CornerRadius="15">

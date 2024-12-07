@@ -3,3 +3,15 @@
 
 [06/12/2024 15:37:41] INFO: Ajout du client: IKEA.
 [06/12/2024 15:53:08] INFO: Ajout du client: Ikea.
+[07/12/2024 09:14:06] INFO: Utilisateur authentifié, accès à l'application.
+[07/12/2024 09:16:14] INFO: Utilisateur authentifié, accès à l'application.
+[07/12/2024 09:23:27] INFO: Utilisateur authentifié, accès à l'application.
+[07/12/2024 09:30:27] INFO: Utilisateur authentifié, accès à l'application.
+[07/12/2024 09:41:33] INFO: Utilisateur authentifié, accès à l'application.
+[07/12/2024 09:42:46] INFO: Utilisateur authentifié, accès à l'application.
+[07/12/2024 09:51:51] INFO: Utilisateur authentifié, accès à l'application.
+[07/12/2024 09:53:33] INFO: Utilisateur authentifié, accès à l'application.
+[07/12/2024 09:54:50] INFO: Utilisateur authentifié, accès à l'application.
+[07/12/2024 10:00:36] INFO: Utilisateur authentifié, accès à l'application.
+[07/12/2024 10:02:52] INFO: Utilisateur authentifié, accès à l'application.
+[07/12/2024 10:03:27] INFO: Vente de 3 Clé USB. - Stock restant: 42.

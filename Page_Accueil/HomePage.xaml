@@ -31,27 +31,34 @@
 
         <!-- Contenu principal (produit + graphique) -->
         <Grid Grid.Row="1" Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="37*"/>
+                <ColumnDefinition Width="23*"/>
+            </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" MinHeight="91.54" />
                 <!-- Texte comme "BEST SELLER" et "TOTAL" -->
-                <RowDefinition Height="*" />
+                <RowDefinition />
                 <!-- Zone pour le graphique -->
             </Grid.RowDefinitions>
 
             <!-- Meilleur Produit -->
-            <Border Background="White" 
+            <Border 
                     BorderBrush="Gray" 
                     BorderThickness="2" 
                     CornerRadius="15" 
                     Padding="10" 
-                    Margin="10,-10,10,24">
+                    Margin="10,-22,10,72" Grid.ColumnSpan="2">
+                <Border.Background>
+                    <SolidColorBrush Color="#FFBC90EB" Opacity="0.75"/>
+                </Border.Background>
                 <TextBlock Name="BestSeller" 
                            Text="BEST SELLER" 
                            HorizontalAlignment="Left" 
                            VerticalAlignment="Top" 
                            TextWrapping="Wrap" 
                            FontFamily="Eras ITC" 
-                           FontSize="24" Margin="-2,-2,0,0" />
+                           FontSize="18" Margin="-2,-2,0,0" />
                 <!-- Taille fixe pour le texte -->
             </Border>
 
@@ -59,16 +66,23 @@
             <TextBlock Name="TotalProduct" 
                        Text="TOTAL" 
                        HorizontalAlignment="Left" 
-                       Margin="618,5,0,0" 
+                       Margin="412,-12,0,0" 
                        VerticalAlignment="Top" 
                        FontFamily="Eras ITC" 
-                       FontSize="18" />
+                       FontSize="18" Height="21" Width="345" Grid.ColumnSpan="2" />
             <!-- Taille fixe pour le texte -->
 
             <!-- Graphique WebView2 -->
             <wv2:WebView2 Name="webView2" 
-                          Margin="10,47,10,32" 
-                          MinHeight="300" Grid.RowSpan="2" />
+                          Margin="10,63,10,10" 
+                          MinHeight="300" Grid.RowSpan="2" Grid.ColumnSpan="2" />
+            <!-- Notification -->
+            <TextBlock Name="Notifcation" 
+                HorizontalAlignment="Left" 
+                Margin="16,26,0,0" 
+                VerticalAlignment="Top" 
+                FontFamily="Eras ITC" 
+                FontSize="18" Height="21" Width="748" Grid.ColumnSpan="2" Foreground="#FF9E4FF2"><Run Text="NOTIFICATION: " FontWeight="Bold"/><Run Text=" "/><Run x:Name="NotificationContent" Text=""/></TextBlock>
         </Grid>
     </Grid>
 </Page>

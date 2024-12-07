@@ -3,12 +3,10 @@ using System.Windows;
 using System.Windows.Controls;
 using static App_Grosiste.Scripts.db_context;
 using Microsoft.Web.WebView2.Core;
+using static App_Grosiste.Page_Admin.AdminPage;
 
 namespace App_Grosiste
 {
-    /// <summary>
-    /// Logique d'interaction pour HomePage.xaml
-    /// </summary>
     public partial class HomePage : Page
     {
         private readonly db_context _context;
@@ -27,7 +25,8 @@ namespace App_Grosiste
             List<Produit> Products = ConvertDataToList();
             Produit bestProductSell = Products.FirstOrDefault();
             BestSeller.Text = $"Meilleur Produit: {bestProductSell.nom}";
-            TotalProduct.Text = $"Total: {Products.Count} produits";
+            TotalProduct.Text = $"Total: {Products.Count} références de produits différents";
+            NotificationContent.Text = $"Dernier produit vendu: {GlobalVariableProductSelled.lastProductSelled}.";
         }
 
         //Récupération des produits depuis la bdd + convertion en liste
